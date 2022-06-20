@@ -44,7 +44,7 @@ public class BikeStationInfoCardViewModel: ObservableObject, Identifiable {
     }
     
     public let id: UUID
-    let titleText: String
+    public let titleText: String
     let titleTextStyle: TextStyle
     let subTitleText: String
     let subTitleTextStyle: TextStyle
@@ -52,13 +52,13 @@ public class BikeStationInfoCardViewModel: ObservableObject, Identifiable {
     let leftBodyTextStyle: TextStyle
     let rightBodyText: String
     let rightBodyTextStyle: TextStyle
-    let leftCounterText: String
+    public let leftCounterText: String
     let leftCounterTextStyle: TextStyle
     let rightCounterText: String
     let rightCounterTextStyle: TextStyle
     let cornerRadius: CGFloat
-    let latitude: Double
-    let longitude: Double
+    public let latitude: Double
+    public let longitude: Double
 }
 
 
@@ -66,7 +66,7 @@ public class BikeStationInfoCardViewModel: ObservableObject, Identifiable {
 public struct BikeStationInfoCardView: View {
     
     @ObservedObject var model: BikeStationInfoCardViewModel
-    init(with model: BikeStationInfoCardViewModel) {
+    public init(with model: BikeStationInfoCardViewModel) {
         self.model = model
     }
     
