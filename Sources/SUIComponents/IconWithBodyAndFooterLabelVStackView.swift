@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(iOS 13.0, macOS 10.15, *)
-class IconWithBodyAndFooterLabelVStackViewModel: ObservableObject {
+public class IconWithBodyAndFooterLabelVStackViewModel: ObservableObject {
     public init(iconName: String,
                 bodyText: String,
                 bodyTextStyle: TextStyle = .init(font: .footnote, color: .black),
@@ -30,14 +30,14 @@ class IconWithBodyAndFooterLabelVStackViewModel: ObservableObject {
 
 
 @available(iOS 13.0, macOS 10.15, *)
-struct IconWithBodyAndFooterLabelVStackView: View {
+public struct IconWithBodyAndFooterLabelVStackView: View {
     
     @ObservedObject var model: IconWithBodyAndFooterLabelVStackViewModel
     public init(with model: IconWithBodyAndFooterLabelVStackViewModel) {
         self.model = model
     }
     
-    var body: some View {
+    public var body: some View {
         VStack {
             Image(model.iconName)
                 .resizable()

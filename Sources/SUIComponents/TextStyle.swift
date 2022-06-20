@@ -8,8 +8,8 @@
 import SwiftUI
 
 @available(iOS 13.0, macOS 10.15, *)
-struct TextStyle {
-    init(font: Font, color: Color) {
+public struct TextStyle {
+    public init(font: Font, color: Color) {
         self.font = font
         self.color = color
     }

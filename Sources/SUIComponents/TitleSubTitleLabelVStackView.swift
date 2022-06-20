@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(iOS 13.0, macOS 10.15, *)
-class TitleSubTitleLabelVStackViewModel: ObservableObject {
+public class TitleSubTitleLabelVStackViewModel: ObservableObject {
     public init(titleText: String,
                 titleTextStyle: TextStyle = .init(font: .system(size: 25).weight(.bold), color: .black),
                 subTitleText: String,
@@ -26,14 +26,14 @@ class TitleSubTitleLabelVStackViewModel: ObservableObject {
 }
 
 @available(iOS 13.0, macOS 10.15, *)
-struct TitleSubTitleLabelVStackView: View {
+public struct TitleSubTitleLabelVStackView: View {
     
     @ObservedObject var model: TitleSubTitleLabelVStackViewModel
     public init(with model: TitleSubTitleLabelVStackViewModel) {
         self.model = model
     }
     
-    var body: some View {
+    public var body: some View {
         VStack(alignment: .leading) {
             Text(model.titleText)
                 .font(model.titleTextStyle.font)
