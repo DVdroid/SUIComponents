@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(iOS 13.0, macOS 10.15, *)
-public class IconWithBodyAndFooterLabelVStackViewModel: ObservableObject {
+public class IconWithBodyAndFooterLabelVStackModel: ObservableObject {
     public init(iconName: String,
                 bodyText: String,
                 bodyTextStyle: TextStyle = .init(font: .footnote, color: .black),
@@ -32,8 +32,8 @@ public class IconWithBodyAndFooterLabelVStackViewModel: ObservableObject {
 @available(iOS 13.0, macOS 10.15, *)
 public struct IconWithBodyAndFooterLabelVStackView: View {
     
-    @ObservedObject var model: IconWithBodyAndFooterLabelVStackViewModel
-    public init(with model: IconWithBodyAndFooterLabelVStackViewModel) {
+    @ObservedObject var model: IconWithBodyAndFooterLabelVStackModel
+    public init(with model: IconWithBodyAndFooterLabelVStackModel) {
         self.model = model
     }
     
@@ -58,7 +58,7 @@ public struct IconWithBodyAndFooterLabelVStackView: View {
 struct IconWithBodyAndFooterLabelVStackView_Previews: PreviewProvider {
     
     static var previews: some View {
-        let model: IconWithBodyAndFooterLabelVStackViewModel = .init(
+        let model: IconWithBodyAndFooterLabelVStackModel = .init(
             iconName: "Lock",
             bodyText: "Available bikes",
             bodyTextStyle: .init(font: .footnote, color: .black),

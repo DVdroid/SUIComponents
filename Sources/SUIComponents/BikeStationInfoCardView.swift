@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(iOS 13.0, macOS 10.15, *)
-public class BikeStationInfoCardViewModel: ObservableObject, Identifiable {
+public class BikeStationInfoCardModel: ObservableObject, Identifiable {
     
     public init(titleText: String,
          titleTextStyle: TextStyle = .init(font: .system(size: 25).weight(.bold), color: .black),
@@ -65,13 +65,13 @@ public class BikeStationInfoCardViewModel: ObservableObject, Identifiable {
 @available(iOS 13.0, macOS 10.15, *)
 public struct BikeStationInfoCardView: View {
     
-    @ObservedObject var model: BikeStationInfoCardViewModel
-    public init(with model: BikeStationInfoCardViewModel) {
+    @ObservedObject var model: BikeStationInfoCardModel
+    public init(with model: BikeStationInfoCardModel) {
         self.model = model
     }
     
     var headerView: some View {
-        let headerModel: TitleSubTitleLabelVStackViewModel = .init(
+        let headerModel: TitleSubTitleLabelVStackModel = .init(
             titleText: model.titleText,
             titleTextStyle: model.titleTextStyle,
             subTitleText: model.subTitleText,
@@ -81,7 +81,7 @@ public struct BikeStationInfoCardView: View {
     }
     
     var leftBodyView: some View {
-        let leftBodyViewModel: IconWithBodyAndFooterLabelVStackViewModel = .init(
+        let leftBodyViewModel: IconWithBodyAndFooterLabelVStackModel = .init(
             iconName: "Bike",
             bodyText: model.leftBodyText,
             bodyTextStyle: model.leftBodyTextStyle,
@@ -92,7 +92,7 @@ public struct BikeStationInfoCardView: View {
     }
     
     var rightBodyView: some View {
-        let rightBodyViewModel: IconWithBodyAndFooterLabelVStackViewModel = .init(
+        let rightBodyViewModel: IconWithBodyAndFooterLabelVStackModel = .init(
             iconName: "Lock",
             bodyText: model.rightBodyText,
             bodyTextStyle: model.rightBodyTextStyle,
@@ -130,7 +130,7 @@ public struct BikeStationInfoCardView: View {
 struct BikeStationInfoCardView_Previews: PreviewProvider {
     
     static var previews: some View {
-        let model: BikeStationInfoCardViewModel = .init(
+        let model: BikeStationInfoCardModel = .init(
             titleText: "047 Ofiar Dabia",
             titleTextStyle: .init(font: .system(size: 25).weight(.bold), color: .black),
             subTitleText: "600m - Bike Station",
