@@ -27,4 +27,4 @@ let model: BikeStationInfoCardModel = .init(
 
 return BikeStationInfoCardView(with: model)
 ```
-![An image that show's the layout of view.](BikeStationInfoCardView.png)
+![An image that show's the layout of the BikeStationInfoCardView.](BikeStationInfoCardView.png)
