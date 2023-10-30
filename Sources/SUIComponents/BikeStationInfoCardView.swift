@@ -10,6 +10,23 @@ import SwiftUI
 @available(iOS 13.0, macOS 10.15, *)
 public class BikeStationInfoCardModel: ObservableObject, Identifiable {
     
+    /// Designated initiliser for BikeStationInfoCardModel
+    /// - Parameters:
+    ///   - titleText: Title text string
+    ///   - titleTextStyle: Instance of styling object for ttile text
+    ///   - subTitleText: Subtitle text string
+    ///   - subTitleTextStyle: Instance of styling object for sub ttile text
+    ///   - leftBodyText: Left body text string
+    ///   - leftBodyTextStyle: Instance of styling object for left body text
+    ///   - rightBodyText: Right body text string
+    ///   - rightBodyTextStyle: Instance of styling object for right body text
+    ///   - leftCounterText: Left counter text string
+    ///   - leftCounterTextStyle: Instance of styling object for left counter text
+    ///   - rightCounterText: Right counter text string
+    ///   - rightCounterTextStyle: Instance of styling object for right counter text
+    ///   - cornerRadius: Corner Radius
+    ///   - latitude: Lattitude text
+    ///   - longitude: Longitude text
     public init(titleText: String,
          titleTextStyle: TextStyle = .init(font: .system(size: 25).weight(.bold), color: .black),
          subTitleText: String,
@@ -66,6 +83,8 @@ public class BikeStationInfoCardModel: ObservableObject, Identifiable {
 public struct BikeStationInfoCardView: View {
     
     @ObservedObject var model: BikeStationInfoCardModel
+    /// Designated initiliser for BikeStationInfoCardView
+    /// - Parameter model: An instance of BikeStationInfoCardModel
     public init(with model: BikeStationInfoCardModel) {
         self.model = model
     }
