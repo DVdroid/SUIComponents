@@ -1,13 +1,13 @@
-# ````
+# ``SUIComponents``
 
-<!--@START_MENU_TOKEN@-->Summary<!--@END_MENU_TOKEN@-->
+Catalog of reusable SwiftUI components.
 
 ## Overview
 
-<!--@START_MENU_TOKEN@-->Text<!--@END_MENU_TOKEN@-->
+SUIComponents provides a list of reusable views(SwiftUI) and viewmodels. Views depends on its viewModel for data and styling customisations. 
 
 ## Topics
 
-### <!--@START_MENU_TOKEN@-->Group<!--@END_MENU_TOKEN@-->
+### Essentials
 
-- <!--@START_MENU_TOKEN@-->``Symbol``<!--@END_MENU_TOKEN@-->
+- <doc:GettingStarted>
